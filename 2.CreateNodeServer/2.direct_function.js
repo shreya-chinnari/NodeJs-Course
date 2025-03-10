@@ -5,6 +5,7 @@ const http = require("http");
    }
    http.createServer(requestListener); 
 */
-http.createServer(function(req,res){
+http.createServer(function(req, res) {
    console.log(req);
-});
+}); // anonymous function, whn no neeed to reuse
+
