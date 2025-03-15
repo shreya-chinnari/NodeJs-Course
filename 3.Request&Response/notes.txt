@@ -1,0 +1,5 @@
+Handling multiple requests
+   - Blocking approach (e.g., PHP): Creates a new thread per request → Heavy on resources.
+   - Non-blocking (Node.js): Uses an event loop and callbacks → Efficient & lightweight.
+
+Response Codes 
