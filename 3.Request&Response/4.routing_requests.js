@@ -9,7 +9,7 @@ const server = http.createServer((req, res) => {
 		res.write("<body><h1>Home Page</h1></body>");
 		res.write("</html>");
 		res.end();
-		return res / end();
+		return res.end();
 	} else if (req.url === "/products") {
 		res.setHeader("Content-Type", "text/html");
 		res.write("<html>");
@@ -17,19 +17,20 @@ const server = http.createServer((req, res) => {
 		res.write("<body><h1>Products</h1></body>");
 		res.write("</html>");
 		res.end();
-		return res / end();
+		return res.end();
 	} else {
+		// This is a catch-all route for unhandled URLs.
 		res.setHeader("Content-Type", "text/html");
 		res.write("<html>");
 		res.write("<head><title>Node Js</title></head>");
 		res.write("<body><h1>Default responseeee</h1></body>");
 		res.write("</html>");
 		res.end();
-		return res / end(); //optional, since last line
+		return res.end(); //optional, since last line
 	}
 });
 
-const PORT = 3007;
+const PORT = 3009;
 server.listen(PORT, () => {
 	console.log(`Server is running on address http://localhost:${PORT}`);
 });
