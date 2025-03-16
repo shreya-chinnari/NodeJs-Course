@@ -1,0 +1,27 @@
+URLSearchParams : 
+   URLSearchParams is a built-in JavaScript class that makes it easy to work with URL-encoded data.
+
+   - It can parse (username=hannah&gender=male) into key-value pairs.
+   - It can convert objects into query strings.
+   - It provides useful methods like .get(), .entries(), and .toString().
+
+
+
+Extracting Key-Value Pairs :
+   Now, we can get the values using different methods.
+
+   Method 1: .get() --- .get("key") extracts a value by its key.
+
+      console.log(params.get("username")); // "hannah"
+      console.log(params.get("gender"));   // "male"
+
+   Method 2: Loop Through Entries --- .entries() returns each key-value pair, making it easy to convert into an object.
+
+      for (const [key, val] of params.entries()) {
+         console.log(key, val);
+      } 
+      // Output: username hannah    gender male
+
+   Method 3: Convert Back to String
+
+      console.log(params.toString()); // "username=hannah&gender=male"
