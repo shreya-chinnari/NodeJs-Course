@@ -1,3 +1,5 @@
+// <Buffer 75 73 65 72 6e 61 6d 65 3d 74 74 65 72 26 67 65 6e 64 65 72 3d 66 65 6d 61 6c 65> - we read the chunk, now we put them in a buffer and transform to meaningful data
+
 const http = require("http");
 const fs = require("fs");
 
@@ -30,17 +32,28 @@ const server = http.createServer((req, res) => {
 		req.method === "POST"
 	) {
 		// here
+		const body = []; //empty array
+
 		req.on("data", (chunk) => {
 			console.log(chunk);
-		}); // jab bhi request aaye, request mei jo new data chunk aaye toh log kr dena
-		/** OUTPUT -------------------------------------
+			body.push(chunk); // push chunk to the array
+		});
+
+		// when chunks aana band ho jaye
+		req.on("end", () => {
+			const fullBody = Buffer.concat(body).toString(); // convert array to string, add all chunks (concat)
+			console.log(fullBody);
+		});
+		/*
          / GET
          /favicon.ico GET
          /submit-details POST
-         <Buffer 75 73 65 72 6e 61 6d 65 3d 74 74 65 72 26 67 65 6e 64 65 72 3d 66 65 6d 61 6c 65> -------------------
-         / GET -------------redirects to GET method
+         <Buffer 75 73 65 72 6e 61 6d 65 3d 61 69 73 68 61 26 67 65 6e 64 65 72 3d 66 65 6d 61 6c 65>
+         username=aisha+jain&gender=female *************** {concat ho kar ek string mei aa gaya}
+         / GET ********************{When you submit the form, the request goes to /submit-details with a POST request. After processing the form data, the server redirects the client back to / (the homepage).}
          /favicon.ico GET
-       */
+      */
+
 		fs.writeFileSync("user.txt", "Shreya");
 		res.statusCode = 302;
 		res.setHeader("Location", "/");
