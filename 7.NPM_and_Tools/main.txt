@@ -1,0 +1,115 @@
+Material Icon Theme - extension install
+````````````````````````````````````````````````
+node package manager
+```````````````````````````````````````````````````
+npm init - initialise the project
+   [
+
+      PS C:\SACHI\Node_Course\7.NPM_and_tools> npm init
+
+      This utility will walk you through creating a package.json file.
+      It only covers the most common items, and tries to guess sensible defaults.
+
+      See `npm help init` for definitive documentation on these fields
+      and exactly what they do.
+
+      Use `npm install <pkg>` afterwards to install a package and
+      save it as a dependency in the package.json file.
+
+      Press ^C at any time to quit.
+      package name: (7.npm_and_tools) npm-test
+      version: (1.0.0)
+      description: this is a package name
+      entry point: (app.js)
+      test command:
+      git repository:
+      keywords:
+      author: shreya chinnari
+      license: (ISC)
+      type: (commonjs)
+      About to write to C:\SACHI\Node_Course\7.NPM_and_tools\package.json:
+
+      {
+      "name": "npm-test",
+      "version": "1.0.0",
+      "description": "this is a package name",
+      "main": "app.js",
+      "scripts": {
+         "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "author": "shreya chinnari",
+      "license": "ISC",
+      "type": "commonjs"
+      }
+   ]
+
+
+   Is this OK? (yes) yes
+
+   ----------package.json is created
+
+````````````````````````````````````````````````````
+
+	added	
+      "start": "node app.js" 
+      "kuch-aisa-random": "node app.js"
+   in package.json --> scripts
+
+      [
+         PS C:\SACHI\Node_Course\7.NPM_and_tools> npm start
+
+         > npm-test@1.0.0 start
+         > node app.js
+
+         Server is running on : http://localhost:3020
+      ]
+
+      to run kuch-aisa-random you have to put "npm run ..."
+
+      [
+         PS C:\SACHI\Node_Course\7.NPM_and_tools> npm run kuch-aisa-random
+
+         > npm-test@1.0.0 kuch-aisa-random
+         > node app.js
+
+         Server is running on : http://localhost:3020
+      ]
+
+
+```````````````````````````````````````````````````
+npm packages -
+
+   node.js package manager
+   reusable code/library
+   package.json - defines package metadata, dependencies
+   versioning
+   registry - public storage for open-source packages
+
+```````````````````````````````````````````````````````````
+
+installing packages
+
+   : -save 
+   : -save-dev {devDependencies, used only in development}
+   : -save-exact {exact version of package specified without updating for newer versions, used in production}
+   : -g {globally install, system-wide}
+   : -force {forces npm to fetch and install packages}
+
+   1. nodemon - server autoupdates, no need to kill to re run, when u change server name or any modifiation it re-starts the server
+      
+      // npm i nodemon --save-dev
+
+      "devDependencies": { 
+		   "nodemon": "^3.1.9"
+	   }
+
+      // npm i nodemon -g
+
+      "scripts": {
+         "test": "echo \"Error: no test specified\" && exit 1",
+         "start": "nodemon app.js",
+         "kuch-aisa-random": "node app.js"
+	   },
+
+   2. 
+   
