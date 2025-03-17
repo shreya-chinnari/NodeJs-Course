@@ -1,0 +1,29 @@
+1. syntax Error
+   {
+      let new = 5; [new is a keyword]
+      const myVar; [initialise it, give it a fixed value]
+   }
+
+2. runtime Error - invalid operations, faulty instruction
+   {
+      console.log(x) [reference error]
+
+      
+   }
+
+3. logical Error
+
+---------------------------------------------
+
+terminal :
+   - npm init ****
+   - package name etc 
+
+
+---------------------------------------------
+
+create app.js
+create syntax.js ---> create testingSyntax() function
+import it in app.js
+npm i nodemon
+modify package.json ---> 	"start": "nodemon app.js"

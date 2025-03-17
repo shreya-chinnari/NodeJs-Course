@@ -95,7 +95,9 @@ installing packages
    : -g {globally install, system-wide}
    : -force {forces npm to fetch and install packages}
 
-   1. nodemon - server autoupdates, no need to kill to re run, when u change server name or any modifiation it re-starts the server
+   1. nodemon - 
+   
+   {server autoupdates, no need to kill to re run, when u change server name or any modifiation it re-starts the server}
       
       // npm i nodemon --save-dev
 
@@ -111,5 +113,5 @@ installing packages
          "kuch-aisa-random": "node app.js"
 	   },
 
-   2. 
+
    
