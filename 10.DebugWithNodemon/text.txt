@@ -1,0 +1,9 @@
+run --> 
+
+   add configuration -->
+
+      {.vscode/launch.json file created automatically}
+
+         "restart": true,
+         "runtimeExecutable": "nodemon", // node by default
+         "console": "integratedTerminal"
