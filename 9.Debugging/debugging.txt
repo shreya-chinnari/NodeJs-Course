@@ -1,0 +1,5 @@
+run -> start debugging -> Node.js
+
+add breakpoints
+
+launch.json file

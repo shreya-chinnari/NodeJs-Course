@@ -1,6 +1,4 @@
 const http = require("http");
-const testingSyntax = require("./syntax"); //import
-const runtime = require("./runtime");
 const logicalError = require("./logical");
 
 const server = http.createServer((req, res) => {
@@ -10,7 +8,7 @@ const server = http.createServer((req, res) => {
 	logicalError();
 });
 
-const PORT = 3000;
+const PORT = 3079;
 server.listen(PORT, () => {
 	console.log(`Server is running on : http://localhost:${PORT}`);
 });
